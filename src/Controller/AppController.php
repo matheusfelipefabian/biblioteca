@@ -17,7 +17,8 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Controller\Controller;
-
+use Cake\I18n\Time;
+use Cake\ORM\TableRegistry;
 /**
  * Application Controller
  *

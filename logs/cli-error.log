@@ -1,0 +1,118 @@
+2020-05-01 23:11:29 Error: [Cake\Database\Exception] Cannot describe penalteis. It has 0 columns. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 102
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:649
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:200
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:123
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:99
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/AllCommand.php:94
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/biblioteca/bin/cake.php:12
+
+
+
+2020-05-01 23:11:39 Error: [BadMethodCallException] Unknown method "belongosTo" called on App\Model\Table\PenaltiesTable in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php on line 2561
+Stack Trace:
+- /var/www/html/biblioteca/src/Model/Table/PenaltiesTable.php:50
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:318
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:263
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:217
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:173
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:98
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/AllCommand.php:94
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/biblioteca/bin/cake.php:12
+
+
+
+2020-05-01 23:13:12 Error: [BadMethodCallException] Unknown method "belongosTo" called on App\Model\Table\PenaltiesTable in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php on line 2561
+Stack Trace:
+- /var/www/html/biblioteca/src/Model/Table/PenaltiesTable.php:50
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:318
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:263
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:217
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:173
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:98
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/AllCommand.php:94
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/biblioteca/bin/cake.php:12
+
+
+
+2020-05-01 23:13:42 Error: [BadMethodCallException] Unknown method "belongosTo" called on App\Model\Table\LoansTable in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php on line 2561
+Stack Trace:
+- /var/www/html/biblioteca/src/Model/Table/LoansTable.php:57
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:318
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:263
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:217
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:173
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:394
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:211
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:123
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:99
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/AllCommand.php:94
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/biblioteca/bin/cake.php:12
+
+
+
+2020-05-01 23:14:58 Error: [BadMethodCallException] Unknown method "belongosTo" called on App\Model\Table\LoansTable in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php on line 2561
+Stack Trace:
+- /var/www/html/biblioteca/src/Model/Table/LoansTable.php:57
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:318
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:263
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:217
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:173
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:394
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:211
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:123
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:99
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/AllCommand.php:94
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/biblioteca/bin/cake.php:12
+
+
+
+2020-05-01 23:18:16 Error: [BadMethodCallException] Unknown method "belongosTo" called on App\Model\Table\PenaltiesTable in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php on line 2561
+Stack Trace:
+- /var/www/html/biblioteca/src/Model/Table/PenaltiesTable.php:50
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:318
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:263
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:217
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:173
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:98
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/ModelCommand.php:82
+- /var/www/html/biblioteca/vendor/cakephp/bake/src/Command/AllCommand.php:94
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/BaseCommand.php:175
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /var/www/html/biblioteca/bin/cake.php:12
+
+
+
+2020-05-09 16:25:45 Error: [Error] Call to undefined method Cake\Core\Plugin::load() in /var/www/html/biblioteca/config/bootstrap.php on line 186
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:139
+- /var/www/html/biblioteca/src/Application.php:47
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:195
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Console/CommandRunner.php:132
+- /var/www/html/biblioteca/bin/cake.php:12
+
+
+
