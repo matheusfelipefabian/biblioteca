@@ -31,24 +31,22 @@ class BooksController extends AppController
      */
     public function index()
     {
-        //$books = $this->paginate($this->Books);
-
         $this->paginate = [
             'order' => [
                 'Books.id' => 'DESC'
             ],'fields' => [
                 'Books.id',
-                'Books.title'
+                'Books.title',
+                'Books.availiable'
             ],
             'limit' => 25
           ];
 
           
         $query = $this->Books->find('search', ['search' => $this->request->getQueryParams()]);
-        //debug($query); die();
+
         $this->set('books', $this->paginate($query));
 
-        //$this->set(compact('books'));
     }
 
     /**
@@ -60,6 +58,8 @@ class BooksController extends AppController
      */
     public function view($id = null)
     {
+        $this->viewBuilder()->setLayout('default');
+
         $book = $this->Books->get($id, [
             'contain' => ['Authors', 'Genders', 'Loans'],
         ]);

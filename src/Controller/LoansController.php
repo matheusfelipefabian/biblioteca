@@ -49,9 +49,6 @@ class LoansController extends AppController
      */
     public function add()
     {
-
-        
-     
         $loan = $this->Loans->newEmptyEntity();
         if ($this->request->is('post')) {
             $loan = $this->Loans->patchEntity($loan, $this->request->getData());
@@ -63,10 +60,17 @@ class LoansController extends AppController
             ]);
             $quantity = sizeof($loans->toArray());
             if($quantity<5){
-                if ($this->Loans->save($loan)) {
-                    $this->Flash->success(__('The loan has been saved.'));
+                $book = $this->Loans->Books->get($loan->book_id);
+                if($book->availiable>0){
+                    $book->availiable--;
+                    
+                    if ($this->Loans->save($loan) && $this->Loans->Books->save($book)) {
+                        $this->Flash->success(__('The loan has been saved.'));
 
-                    return $this->redirect(['action' => 'index']);
+                        return $this->redirect(['action' => 'index']);
+                    }
+                }else{
+                    $this->Flash->error(__('O Livro escolhido não está disponível'));    
                 }
             }else{
                 $this->Flash->error(__('Esta pessoa já possui 5 empréstimos ativos em seu nome'));
@@ -90,14 +94,39 @@ class LoansController extends AppController
         $loan = $this->Loans->get($id, [
             'contain' => [],
         ]);
+        $book = $this->Loans->Books->get($loan->book_id);
+        //debug($book); die();
+        $active = $loan->active;
         if ($this->request->is(['patch', 'post', 'put'])) {
             $loan = $this->Loans->patchEntity($loan, $this->request->getData());
-            if ($this->Loans->save($loan)) {
-                $this->Flash->success(__('The loan has been saved.'));
+            if($loan->active!=$active){
+                if($loan->active){
+                    if($book->availiable>0){
+                        $book->availiable--;
+                        if($this->Loans->Books->save($book) and $this->Loans->save($loan)){
+                            $this->Flash->success(__('The loan has been saved.'));
+                            return $this->redirect(['action' => 'index']); 
+                        }
+                    }else{
+                        $this->Flash->error(__('The loan could not be saved. Please, try again.'));            
+                    }
+                }else{
+                    
+                    $book->availiable++;
+                    // debug($book); die();
+                    if($this->Loans->Books->save($book) and $this->Loans->save($loan)){
+                        $this->Flash->success(__('The loan has been saved.'));
+                        return $this->redirect(['action' => 'index']); 
+                    }
+                }
+            }else{    
+                if ($this->Loans->save($loan)) {
+                    $this->Flash->success(__('The loan has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('The loan could not be saved. Please, try again.'));
             }
-            $this->Flash->error(__('The loan could not be saved. Please, try again.'));
         }
         $customers = $this->Loans->Customers->find('list', ['limit' => 200]);
         $books = $this->Loans->Books->find('list', ['limit' => 200]);

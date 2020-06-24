@@ -31,5 +31,7 @@ class Book extends Entity
         'loans' => true,
         'authors' => true,
         'genders' => true,
+        'availiable' => true,
+        'publisher_id' =>true,
     ];
 }

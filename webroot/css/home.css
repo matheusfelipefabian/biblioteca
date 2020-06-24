@@ -70,3 +70,24 @@ hr {
     padding: 10px;
     margin: 10px 0;
 }
+
+.box{
+    border-color: #ffffff;
+    background-color: #f14f49;
+    border-style: solid;
+    border-width: 2px;
+    border-radius:8px;
+    box-shadow: 4px 4px 8px #dddddd;
+    height: 90px;
+    width: 400px;
+    margin: 20px 20px 20px 20px;
+}
+
+.section{
+
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    color: white;
+    /* text-shadow: -1px 1px 0 #333333, 1px 1px 0 #333333, 1px -1px 0 #333333, -1px -1px 0 #333333; */
+    text-decoration: none;
+}

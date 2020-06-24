@@ -4,6 +4,24 @@
  * @var \App\Model\Entity\Book $book
  */
 ?>
+
+<!-- <?php
+    // $this->Html->css('style');
+?> -->
+<style>
+    .table{
+        display: inline;
+    }
+    .capa{
+        float: right;
+        display: inline;
+        position: relative;
+        width: 115px;
+        height:140px;
+        box-shadow: 3px 3px 5px grey;
+    }
+</style>
+
 <div class="row">
     <aside class="column">
         <div class="side-nav">
@@ -15,9 +33,9 @@
         </div>
     </aside>
     <div class="column-responsive column-80">
-        <div class="books view content">
+        <div class="books-view-content">
             <h3><?= h($book->title) ?></h3>
-            <table>
+            <table class="table">
                 <tr>
                     <th><?= __('Title') ?></th>
                     <td><?= h($book->title) ?></td>
@@ -26,7 +44,12 @@
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($book->id) ?></td>
                 </tr>
+                <tr>
+                    <th><?= __('Cópias Disponíveis') ?></th>
+                    <td><?= h($book->availiable) ?></td>
+                </tr>
             </table>
+            <div class="capa" ><img src=<?php echo "/biblioteca/webroot/img/capa/book_".$book->id.".jpg"?>></div>
             <div class="related">
                 <h4><?= __('Related Authors') ?></h4>
                 <?php if (!empty($book->authors)) : ?>

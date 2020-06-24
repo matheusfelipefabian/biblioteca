@@ -4574,3 +4574,960 @@ Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
 
 
 
+2020-05-19 23:35:25 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  missing FROM-clause entry for table "book"
+LINE 1: ...ble AS "Books__availiable" FROM books Books WHERE Book.id = ...
+                                                             ^ in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php on line 178
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:342
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:345
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1100
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1047
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:309
+- /var/www/html/biblioteca/src/Controller/LoansController.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /loans/add
+Referer URL: http://localhost/biblioteca/loans/add
+
+
+2020-05-19 23:36:07 Error: [BadMethodCallException] Unknown finder method "id" on App\Model\Table\BooksTable. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php on line 2470
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:1258
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Association.php:851
+- /var/www/html/biblioteca/src/Controller/LoansController.php:55
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /loans/add
+Referer URL: http://localhost/biblioteca/loans/add
+
+
+2020-05-27 23:11:19 Error: [TypeError] Argument 1 passed to Cake\View\Helper\HtmlHelper::style() must be of the type array, string given, called in /var/www/html/biblioteca/templates/Books/view.php on line 9 in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/HtmlHelper.php on line 574
+Stack Trace:
+- /var/www/html/biblioteca/templates/Books/view.php:9
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1160
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1121
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:751
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /books/view/1
+Referer URL: http://localhost/biblioteca/books
+
+
+2020-05-28 00:05:43 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-05-28 00:07:06 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-05-28 00:07:07 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-05-28 00:07:08 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-05-28 00:08:03 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-06-20 13:11:43 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webroot could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /webroot/img/capa/book_16.jpg
+Referer URL: http://localhost/biblioteca/books/view/16
+
+
+2020-06-20 13:11:50 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webroot could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /webroot/img/capa/book_27.jpg
+Referer URL: http://localhost/biblioteca/books/view/27
+
+
+2020-06-20 13:12:11 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webroot could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /webroot/img/capa/book_16.jpg
+Referer URL: http://localhost/biblioteca/books/view/16
+
+
+2020-06-20 13:12:34 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webroot could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /webroot/img/capa/book_3.jpg
+Referer URL: http://localhost/biblioteca/books/view/3
+
+
+2020-06-20 13:18:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webroot could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webroot',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /webroot/img/capa/book_27.jpg
+Referer URL: http://localhost/biblioteca/books/view/27
+
+
+2020-06-20 13:23:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-06-20 13:25:47 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-06-23 01:38:42 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-06-23 01:39:16 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /css/milligram.min.css.map
+
+
+2020-06-24 00:40:03 Error: [ParseError] syntax error, unexpected 'echo' (T_ECHO) in /var/www/html/biblioteca/templates/Loans/index.php on line 30
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1121
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:751
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /loans
+Referer URL: http://localhost/biblioteca/loans/edit/2
+
+
+2020-06-24 00:42:05 Error: [TypeError] strtolower() expects parameter 1 to be string, boolean given in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php on line 264
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php:264
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php:477
+- /var/www/html/biblioteca/templates/Loans/index.php:14
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1160
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1121
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:751
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /loans?sort=ID&direction=asc
+Referer URL: http://localhost/biblioteca/loans
+
+
+2020-06-24 00:43:23 Error: [TypeError] strtolower() expects parameter 1 to be string, boolean given in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php on line 264
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php:264
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php:477
+- /var/www/html/biblioteca/templates/Loans/index.php:14
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1160
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1121
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:751
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /loans?sort=ID&direction=asc
+Referer URL: http://localhost/biblioteca/loans
+
+
+2020-06-24 00:43:56 Error: [TypeError] strtolower() expects parameter 1 to be string, boolean given in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php on line 264
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php:264
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php:477
+- /var/www/html/biblioteca/templates/Loans/index.php:14
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1160
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1121
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:751
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /loans?sort=ID&direction=asc
+Referer URL: http://localhost/biblioteca/loans
+
+
+2020-06-24 00:44:09 Error: [TypeError] strtolower() expects parameter 1 to be string, boolean given in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php on line 264
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php:264
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php:477
+- /var/www/html/biblioteca/templates/Loans/index.php:14
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1160
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:1121
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/View/View.php:751
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:688
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:530
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /loans?sort=iee&direction=asc
+Referer URL: http://localhost/biblioteca/loans?sort=ID&direction=asc
+
+
+2020-06-24 00:57:07 Error: [Cake\Http\Exception\MissingControllerException] Controller class Editors could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Editors',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /editors
+
+
+2020-06-24 00:57:24 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column publishers.name does not exist
+LINE 1: SELECT Publishers.id AS "Publishers__id", Publishers.Name AS...
+                                                  ^
+HINT:  Perhaps you meant to reference the column "publishers.Name". in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php on line 178
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:342
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:345
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1100
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1047
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/Paginator.php:180
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php:203
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:780
+- /var/www/html/biblioteca/src/Controller/PublishersController.php:21
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /publishers
+
+
+2020-06-24 00:57:45 Error: [Cake\Http\Exception\MissingControllerException] Controller class Publisher could not be found. in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Publisher',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:227
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /publisher
+
+
+2020-06-24 00:57:48 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column publishers.name does not exist
+LINE 1: SELECT Publishers.id AS "Publishers__id", Publishers.Name AS...
+                                                  ^
+HINT:  Perhaps you meant to reference the column "publishers.Name". in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php on line 178
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:342
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:345
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1100
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1047
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/Paginator.php:180
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php:203
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:780
+- /var/www/html/biblioteca/src/Controller/PublishersController.php:21
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /publishers
+
+
+2020-06-24 00:58:28 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "name" of relation "publishers" does not exist
+LINE 1: INSERT INTO publishers (Name) VALUES ($1) RETURNING *
+                                ^ in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php on line 178
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:342
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:345
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:2036
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:1928
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:1829
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:1529
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:692
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:1530
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php:1830
+- /var/www/html/biblioteca/src/Controller/PublishersController.php:52
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /publishers/add
+Referer URL: http://localhost/biblioteca/publishers/add
+
+
+2020-06-24 12:36:07 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column publishers.name does not exist
+LINE 1: SELECT Publishers.id AS "Publishers__id", Publishers.Name AS...
+                                                  ^
+HINT:  Perhaps you meant to reference the column "publishers.Name". in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php on line 178
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:342
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:345
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1100
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1047
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/Paginator.php:180
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php:203
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:780
+- /var/www/html/biblioteca/src/Controller/PublishersController.php:21
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /publishers/
+
+
+2020-06-24 12:39:31 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column publishers.name does not exist
+LINE 1: SELECT Publishers.id AS "Publishers__id", Publishers.Name AS...
+                                                  ^
+HINT:  Perhaps you meant to reference the column "publishers.Name". in /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php on line 178
+Stack Trace:
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:342
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:69
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php:345
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Database/Query.php:245
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1100
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/ORM/Query.php:1047
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Datasource/Paginator.php:180
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php:203
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:780
+- /var/www/html/biblioteca/src/Controller/PublishersController.php:21
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:138
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:162
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/biblioteca/webroot/index.php:40
+
+Request URL: /publishers/
+
+

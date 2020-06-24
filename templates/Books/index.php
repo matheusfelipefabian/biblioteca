@@ -34,26 +34,28 @@
 
 
 <div class="books index content">
-    <?= $this->Html->link(__('New Book'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Books') ?></h3>
+    <?php echo $this->Html->link(__('New Book'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <h3><?php echo __('Livros') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('title') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th><?php echo $this->Paginator->sort('id') ?></th>
+                    <th><?php echo $this->Paginator->sort('Books.title', 'Título') ?></th>
+                    <th><?php echo $this->Paginator->sort('Books.availiable', 'Cópias Disponíveis') ?></th>
+                    <th class="actions"><?php echo __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($books as $book): ?>
                 <tr>
-                    <td><?= $this->Number->format($book->id) ?></td>
-                    <td><?= h($book->title) ?></td>
+                    <td><?php echo $this->Number->format($book->id) ?></td>
+                    <td><?php echo h($book->title) ?></td>
+                    <td><?php echo $this->Number->format($book->availiable) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $book->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $book->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $book->id], ['confirm' => __('Are you sure you want to delete # {0}?', $book->id)]) ?>
+                        <?php echo $this->Html->link(__('Ver'), ['action' => 'view', $book->id]) ?>
+                        <?php echo $this->Html->link(__('Editar'), ['action' => 'edit', $book->id]) ?>
+                        <?php echo $this->Form->postLink(__('Deletar'), ['action' => 'delete', $book->id], ['confirm' => __('Are you sure you want to delete # {0}?', $book->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -62,12 +64,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?php echo $this->Paginator->first('<< ' . __('first')) ?>
+            <?php echo $this->Paginator->prev('< ' . __('previous')) ?>
+            <?php echo $this->Paginator->numbers() ?>
+            <?php echo $this->Paginator->next(__('next') . ' >') ?>
+            <?php echo $this->Paginator->last(__('last') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?php echo $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
