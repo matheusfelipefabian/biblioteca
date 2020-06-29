@@ -45,7 +45,7 @@
                     <td><?= $this->Number->format($book->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Cópias Disponíveis') ?></th>
+                    <th><?= __('Availiable Copies') ?></th>
                     <td><?= h($book->availiable) ?></td>
                 </tr>
             </table>

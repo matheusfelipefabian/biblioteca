@@ -5,56 +5,32 @@
  */
 ?>
 
-<?php
-            echo $this->Form->create(null);
-        ?>
-        <div class="search-text">
-            <?php
-            // Match the search param in your table configuration
-            echo $this->Form->input('q',
-                [
-                    'label' => false,
-                    'type' => 'text',
-                    'placeholder' => 'Busque por um Livro'
-                ]
-            );
-            ?>
-        </div>
-
-        <?php
-        echo $this->Form->submit(__('SEARCH'), [
-            'type' => 'submit'
-        ]);
-        echo $this->Form->end();
-        ?>
-
 <div class="penalties index content">
-    <?= $this->Html->link(__('New Penalty'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Penalties') ?></h3>
+    <h3><?php echo __('Penalties') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('value') ?></th>
-                    <th><?= $this->Paginator->sort('customer_id') ?></th>
-                    <th><?= $this->Paginator->sort('payed') ?></th>
-                    <th><?= $this->Paginator->sort('loan_id') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th><?php echo $this->Paginator->sort('id') ?></th>
+                    <th><?php echo $this->Paginator->sort('value') ?></th>
+                    <th><?php echo $this->Paginator->sort('customer_id') ?></th>
+                    <th><?php echo $this->Paginator->sort('payed') ?></th>
+                    <th><?php echo $this->Paginator->sort('loan_id') ?></th>
+                    <th class="actions"><?php echo __('Actions') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($penalties as $penalty): ?>
                 <tr>
-                    <td><?= $this->Number->format($penalty->id) ?></td>
-                    <td><?= $this->Number->format($penalty->value) ?></td>
-                    <td><?= $this->Number->format($penalty->customer_id) ?></td>
-                    <td><?= h($penalty->payed) ?></td>
-                    <td><?= $this->Number->format($penalty->loan_id) ?></td>
+                    <td><?php echo $this->Number->format($penalty->id) ?></td>
+                    <td><?php echo $this->Number->format($penalty->value) ?></td>
+                    <td><?php echo $this->Number->format($penalty->customer_id) ?></td>
+                    <td><?php echo $penalty->payed? 'YES' : 'NOT' ?></td>
+                    <td><?php echo $this->Number->format($penalty->loan_id) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $penalty->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $penalty->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $penalty->id], ['confirm' => __('Are you sure you want to delete # {0}?', $penalty->id)]) ?>
+                        <?php echo $this->Html->link(__('View'), ['action' => 'view', $penalty->id]) ?>
+                        <?php echo $this->Html->link(__('Edit'), ['action' => 'edit', $penalty->id]) ?>
+                        <?php echo $this->Form->postLink(__('Delete'), ['action' => 'delete', $penalty->id], ['confirm' => __('Are you sure you want to delete # {0}?', $penalty->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -63,12 +39,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?php echo $this->Paginator->first('<< ' . __('first')) ?>
+            <?php echo $this->Paginator->prev('< ' . __('previous')) ?>
+            <?php echo $this->Paginator->numbers() ?>
+            <?php echo $this->Paginator->next(__('next') . ' >') ?>
+            <?php echo $this->Paginator->last(__('last') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?php echo $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>

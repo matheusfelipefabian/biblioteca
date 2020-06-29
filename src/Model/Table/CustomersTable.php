@@ -68,7 +68,27 @@ class CustomersTable extends Table
             ->maxLength('name', 50)
             ->requirePresence('name', 'create')
             ->notEmptyString('name');
+       
+        $validator
+            ->scalar('cpf')
+            ->maxLength('cpf', 14)
+            ->requirePresence('cpf', 'create')
+            ->notEmptyString('cpf');
 
+        $validator
+            ->scalar('telefone')
+            ->maxLength('telefone', 15)
+            ->requirePresence('telefone', 'create');
+
+        $validator
+            ->scalar('email')
+            ->maxLength('email', 100)
+            ->requirePresence('email', 'create');
+
+        $validator
+            ->date('nascimento')
+            ->requirePresence('nascimento', 'create')
+            ->notEmptyDate('nascimento');
         return $validator;
     }
 }

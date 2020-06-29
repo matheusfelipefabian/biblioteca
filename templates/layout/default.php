@@ -43,16 +43,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="/biblioteca"><span>BIB</span>TECA</a>
         </div>
         <div class="top-nav-title">
-            <a href="/biblioteca/books">LIVROS</a>
+            <a href="/biblioteca/books">BOOKS</a>
         </div>
         <div class="top-nav-title">
-            <a href="/biblioteca/authors">AUTORES</a>
+            <a href="/biblioteca/authors">AUTHORS</a>
         </div>
         <div class="top-nav-title">
-            <a href="/biblioteca/customers">CLIENTES</a>
+            <a href="/biblioteca/customers">CUSTOMERS</a>
         </div>
         <div class="top-nav-title">
-            <a href="/biblioteca/loans">EMPRÉSTIMOS</a>
+            <a href="/biblioteca/loans">LOANS</a>
         </div>
     </nav>
     <main class="main">

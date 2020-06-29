@@ -17,7 +17,7 @@
                 [
                     'label' => false,
                     'type' => 'text',
-                    'placeholder' => 'Busque por um Livro'
+                    'placeholder' => 'Search for a Book'
                 ]
             );
             ?>
@@ -35,15 +35,15 @@
 
 <div class="books index content">
     <?php echo $this->Html->link(__('New Book'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?php echo __('Livros') ?></h3>
+    <h3><?php echo __('Books') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
                     <th><?php echo $this->Paginator->sort('id') ?></th>
-                    <th><?php echo $this->Paginator->sort('Books.title', 'Título') ?></th>
-                    <th><?php echo $this->Paginator->sort('Books.availiable', 'Cópias Disponíveis') ?></th>
-                    <th class="actions"><?php echo __('Ações') ?></th>
+                    <th><?php echo $this->Paginator->sort('Books.title', 'Title') ?></th>
+                    <th><?php echo $this->Paginator->sort('Books.availiable', 'Availiable Copies') ?></th>
+                    <th class="actions"><?php echo __('Actions') ?></th>
                 </tr>
             </thead>
             <tbody>
@@ -53,9 +53,9 @@
                     <td><?php echo h($book->title) ?></td>
                     <td><?php echo $this->Number->format($book->availiable) ?></td>
                     <td class="actions">
-                        <?php echo $this->Html->link(__('Ver'), ['action' => 'view', $book->id]) ?>
-                        <?php echo $this->Html->link(__('Editar'), ['action' => 'edit', $book->id]) ?>
-                        <?php echo $this->Form->postLink(__('Deletar'), ['action' => 'delete', $book->id], ['confirm' => __('Are you sure you want to delete # {0}?', $book->id)]) ?>
+                        <?php echo $this->Html->link(__('View'), ['action' => 'view', $book->id]) ?>
+                        <?php echo $this->Html->link(__('Edit'), ['action' => 'edit', $book->id]) ?>
+                        <?php echo $this->Form->postLink(__('Delete'), ['action' => 'delete', $book->id], ['confirm' => __('Are you sure you want to delete # {0}?', $book->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

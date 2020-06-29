@@ -17,7 +17,7 @@
             <fieldset>
                 <legend><?= __('Add Publisher') ?></legend>
                 <?php
-                    echo $this->Form->control('Name');
+                    echo $this->Form->control('name');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

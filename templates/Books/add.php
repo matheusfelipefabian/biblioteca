@@ -18,6 +18,8 @@
                 <legend><?= __('Add Book') ?></legend>
                 <?php
                     echo $this->Form->control('title');
+                    echo $this->Form->control('availiable');
+                    echo $this->Form->control('publisher_id', ['type'=> 'select', 'options' => $publishers]);
                     echo $this->Form->control('authors._ids', ['options' => $authors, 'style'=>'height:80px;']);
                     echo $this->Form->control('genders._ids', ['options' => $genders, 'style'=>'height:80px;']);
                 ?>

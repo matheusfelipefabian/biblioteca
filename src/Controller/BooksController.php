@@ -83,10 +83,12 @@ class BooksController extends AppController
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The book could not be saved. Please, try again.'));
+        
         }
+        $publishers = $this->Books->Publishers->find('list', ['limit' => 200]);
         $authors = $this->Books->Authors->find('list', ['limit' => 200]);
         $genders = $this->Books->Genders->find('list', ['limit' => 200]);
-        $this->set(compact('book', 'authors', 'genders'));
+        $this->set(compact('book', 'authors', 'genders', 'publishers'));
     }
 
     /**
@@ -110,9 +112,10 @@ class BooksController extends AppController
             }
             $this->Flash->error(__('The book could not be saved. Please, try again.'));
         }
+        $publishers = $this->Books->Publishers->find('list', ['limit' => 200]);
         $authors = $this->Books->Authors->find('list', ['limit' => 200]);
         $genders = $this->Books->Genders->find('list', ['limit' => 200]);
-        $this->set(compact('book', 'authors', 'genders'));
+        $this->set(compact('book', 'authors', 'genders', 'publishers'));
     }
 
     /**

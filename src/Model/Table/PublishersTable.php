@@ -38,7 +38,7 @@ class PublishersTable extends Table
         parent::initialize($config);
 
         $this->setTable('publishers');
-        $this->setDisplayField('id');
+        $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
         $this->hasMany('Books', [
@@ -59,9 +59,9 @@ class PublishersTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->scalar('Name')
-            ->requirePresence('Name', 'create')
-            ->notEmptyString('Name');
+            ->scalar('name')
+            ->requirePresence('name', 'create')
+            ->notEmptyString('name');
 
         return $validator;
     }

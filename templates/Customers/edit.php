@@ -23,6 +23,10 @@
                 <legend><?= __('Edit Customer') ?></legend>
                 <?php
                     echo $this->Form->control('name');
+                    echo $this->Form->control('cpf');
+                    echo $this->Form->control('telefone');
+                    echo $this->Form->control('email');
+                    echo $this->Form->control('nascimento');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

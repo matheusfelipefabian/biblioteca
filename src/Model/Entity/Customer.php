@@ -27,5 +27,9 @@ class Customer extends Entity
     protected $_accessible = [
         'name' => true,
         'loans' => true,
+        'cpf' => true,
+        'telefone' => true,
+        'email' => true,
+        'nascimento' => true,
     ];
 }

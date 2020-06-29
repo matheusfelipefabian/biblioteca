@@ -59,7 +59,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                 <img alt="CakePHP" src="/biblioteca/webroot/img/LOGO.jpg" width="250" />
             </a>
             <h1>
-                BEM VINDO À BIBTECA
+                WELCOME TO BIBTECA
             </h1>
         </div>
     </header>
@@ -68,9 +68,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             <div class="content">
                 <div class="row">
                     <div class="column">
-                        <div class="message default text-center">
-                            <small>Please be aware that this page will not be shown if you turn off debug mode unless you replace templates/Pages/home.php with your own version.</small>
-                        </div>
+                        
                         <?php Debugger::checkSecurityKeys(); ?>
                     </div>
                 </div>
@@ -78,7 +76,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     <div class="column">
                     <div class="box">
                         <?php
-                        echo $this->Html->link(__('<h1 class="section">LIVROS</h1>'), 
+                        echo $this->Html->link(__('<h1 class="section">BOOKS</h1>'), 
                             [
                                 'controller' => 'books'
                             ], 
@@ -88,7 +86,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     </div>
                     <div class="box">
                         <?php
-                        echo $this->Html->link(__('<h1 class="section">CLIENTES</h1>'), 
+                        echo $this->Html->link(__('<h1 class="section">CUSTOMERS</h1>'), 
                             [
                                 'controller' => 'books'
                             ], 
@@ -98,7 +96,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     </div>
                     <div class="box">
                         <?php
-                        echo $this->Html->link(__('<h1 class="section">EMPRÉSTIMOS</h1>'), 
+                        echo $this->Html->link(__('<h1 class="section">LOANS</h1>'), 
                             [
                                 'controller' => 'books'
                             ], 
@@ -109,13 +107,34 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     </div>
                     <div class="column">
                         <div class="box">
-                            <h1 class="section">EDITORAS</h1>
+                            <?php
+                            echo $this->Html->link(__('<h1 class="section">PUBLISHERS</h1>'), 
+                                [
+                                    'controller' => 'publishers'
+                                ], 
+                                array('escape' => false,'style'=>'text-decoration:none')
+                            );
+                            ?>
                         </div>
                         <div class="box">
-                            <h1 class="section">AUTORES</h1>
+                        <?php
+                        echo $this->Html->link(__('<h1 class="section">AUTHORS</h1>'), 
+                            [
+                                'controller' => 'authors'
+                            ], 
+                            array('escape' => false,'style'=>'text-decoration:none')
+                        );
+                        ?>
                         </div>
                         <div class="box">
-                            <h1 class="section">GÊNEROS</h1>
+                            <?php
+                            echo $this->Html->link(__('<h1 class="section">GENDERS</h1>'), 
+                                [
+                                    'controller' => 'genders'
+                                ], 
+                                array('escape' => false,'style'=>'text-decoration:none')
+                            );
+                            ?>
                         </div>
                     </div>
                 </div>

@@ -63,6 +63,11 @@ class BooksTable extends Table
             'targetForeignKey' => 'gender_id',
             'joinTable' => 'books_genders',
         ]);
+
+        $this->belongsTo('Publishers', [
+            'foreignKey' => 'publisher_id',
+            'joinType' => 'INNER',
+        ]);
     }
 
 
